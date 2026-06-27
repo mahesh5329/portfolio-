@@ -58,3 +58,23 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+/* Ensure the body doesn't cause horizontal scroll on zoom */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Updated Glass for Nav to ensure it covers full width correctly */
+.glass {
+    background: rgba(15, 23, 42, 0.8); /* Darker base for readability */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Fix for zoom issues: Ensure fixed elements don't shift */
+nav {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
